@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Open When You Miss Me 💌</title>
+  <style>
+    body {
+      font-family: 'Arial', sans-serif;
+      background: linear-gradient(135deg, #ffd1dc, #ffe6f0);
+      text-align: center;
+      padding: 50px;
+      color: #333;
+    }
+
+    h1 {
+      font-size: 2.5rem;
+    }
+
+    .button {
+      background-color: #ff6f91;
+      border: none;
+      padding: 15px 25px;
+      margin: 15px;
+      border-radius: 25px;
+      color: white;
+      font-size: 1rem;
+      cursor: pointer;
+      transition: 0.3s;
+    }
+
+    .button:hover {
+      background-color: #ff3f6c;
+      transform: scale(1.05);
+    }
+
+    .message {
+      display: none;
+      margin-top: 20px;
+      font-size: 1.2rem;
+      background: white;
+      padding: 20px;
+      border-radius: 15px;
+      box-shadow: 0 5px 15px rgba(0,0,0,0.1);
+      max-width: 450px;
+      margin-left: auto;
+      margin-right: auto;
+    }
+
+    .photo {
+      width: 100%;
+      border-radius: 10px;
+      margin-top: 15px;
+    }
+  </style>
+</head>
+<body>
+
+  <h1>Open When You Miss Me 💌</h1>
+  <p>Click a letter whenever you feel something...</p>
+
+  <button class="button" onclick="showMessage('miss')">Open when you miss me</button>
+  <button class="button" onclick="showMessage('sad')">Open when you're sad</button>
+  <button class="button" onclick="showMessage('happy')">Open when you're happy</button>
+  <button class="button" onclick="showMessage('sleep')">Open before you sleep</button>
+
+  <div id="miss" class="message">
+    Hey love 💖<br><br>
+    If you're missing me right now, just know I'm thinking of you too. No distance can change what you mean to me. Come back and read this whenever you need me.
+    <img src="14.jpeg" class="photo">
+  </div>
+
+  <div id="sad" class="message">
+    Hey… 🫂<br><br>
+    I wish I could hug you right now. Whatever you're going through, you're stronger than you think. And I'm always here for you.
+    <img src="11.jpeg" class="photo">
+  </div>
+
+  <div id="happy" class="message">
+    Aww you’re happy!! 😄💛<br><br>
+    That makes me so happy too. I love seeing you smile, even if I’m not there. Keep shining, always.
+    <img src="13.jpeg" class="photo">
+  </div>
+
+  <div id="sleep" class="message">
+    Goodnight my love 🌙<br><br>
+    I hope you sleep peacefully and dream of us. I’ll be right here when you wake up.
+    <img src="12.jpeg" class="photo">
+  </div>
+
+  <script>
+    function showMessage(id) {
+      const messages = document.querySelectorAll('.message');
+      messages.forEach(msg => msg.style.display = 'none');
+      document.getElementById(id).style.display = 'block';
+    }
+  </script>
+
+</body>
+</html>
